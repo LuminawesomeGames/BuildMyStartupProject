@@ -9,6 +9,7 @@ using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.OLE.Interop;
 using Microsoft.VisualStudio.Shell;
 using EnvDTE;
+using EnvDTE80;
 
 namespace LuminawesomeGamesLtd.BuildMyStartupProject
 {
@@ -118,10 +119,15 @@ namespace LuminawesomeGamesLtd.BuildMyStartupProject
 			if (startup_projects != null && startup_projects.Length > 0)
 			{
 				string startup_project = startup_projects.GetValue(0) as string;
-				if (startup_project != null)
+				if (startup_project != null && 
+					DTEObject.Solution.SolutionBuild.BuildState == vsBuildState.vsBuildStateNotStarted ||
+					DTEObject.Solution.SolutionBuild.BuildState == vsBuildState.vsBuildStateDone)
 				{
-					SolutionConfiguration active_config = DTEObject.Solution.SolutionBuild.ActiveConfiguration;
-					DTEObject.Solution.SolutionBuild.BuildProject(active_config.Name, startup_project);
+					SolutionConfiguration2 active_config = DTEObject.Solution.SolutionBuild.ActiveConfiguration as SolutionConfiguration2;					
+					
+					DTEObject.ExecuteCommand("View.Output");
+
+					DTEObject.Solution.SolutionBuild.BuildProject(active_config.Name + "|" + active_config.PlatformName, startup_project);
 				}				
 			}
         }

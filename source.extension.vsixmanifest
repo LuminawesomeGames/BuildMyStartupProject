@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
-		<Identity Id="45c111cd-4112-4b59-9269-3dd453c0fc19" Version="1.0" Language="en-US" Publisher="Luminawesome Games Ltd." />
+		<Identity Id="45c111cd-4112-4b59-9269-3dd453c0fc19" Version="1.0.1" Language="en-US" Publisher="Luminawesome Games Ltd." />
 		<DisplayName>Build My Startup Project</DisplayName>
 		<Description xml:space="preserve">Build's your current startup project becasue it's better that way.</Description>
 	</Metadata>
