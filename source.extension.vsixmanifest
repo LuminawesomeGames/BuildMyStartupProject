@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+<<<<<<< HEAD
     <Metadata>
         <Identity Id="45c111cd-4112-4b59-9269-3dd453c0fc19" Version="1.0.1" Language="en-US" Publisher="Luminawesome Games Ltd." />
         <DisplayName>Build My Startup Project</DisplayName>
@@ -18,4 +19,24 @@
     <Prerequisites>
         <Prerequisite Id="Microsoft.Net.Component.4.7.2.TargetingPack" Version="[16.6.30027.131,17.0)" DisplayName=".NET Framework 4.7.2 targeting pack" />
     </Prerequisites>
+=======
+  <Metadata>
+    <Identity Id="45c111cd-4112-4b59-9269-3dd453c0fc19" Version="1.0.1" Language="en-US" Publisher="Luminawesome Games Ltd." />
+    <DisplayName>Build My Startup Project</DisplayName>
+    <Description xml:space="preserve">Build's your current startup project becasue it's better that way.</Description>
+  </Metadata>
+  <Installation InstalledByMsi="false">
+    <InstallationTarget Version="[15.0,16.0)" Id="Microsoft.VisualStudio.Pro" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.12.0" DisplayName="Visual Studio MPF 12.0" d:Source="Installed" Version="[12.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26208.0,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
+>>>>>>> 26f2da99a3fae31f1ee87038b1d296ec6fbd576f
 </PackageManifest>
